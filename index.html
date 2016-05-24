@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head data-cast-api-enabled="true">
+  <meta charset="utf-8">
+  <title>videojs-soundcloud Demo</title>
+  <link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+  <script src="node_modules/video.js/dist/video.js"></script>
+  <script src="dist/videojs-soundcloud.js"></script>
+</head>
+<body>
+<video class="video-js vjs-default-skin" controls width="640px" height="360px" crossorigin="anonymous"
+>
+  <source src="https://api.soundcloud.com/tracks/237603952" type="video/soundcloud">
+</video>
+<ul>
+  <li><a href="test/">Run unit tests in browser.</a></li>
+</ul>
+<!-- dailymotion sdk -->
+<script>
+
+  var player = videojs(document.querySelector('video'), {
+    language: 'fr',
+    techOrder: ['soundcloud']
+  }).toJSON();
+
+</script>
+</body>
+</html>
